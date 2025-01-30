@@ -46,6 +46,7 @@ h1:hover  {
 
 #FormulaireConnexion input[type = "submit"] {
     background-color: antiquewhite;
+    border-radius: 30px;
 }
 
 hr {

@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/home/epitech-msc-20/Projet/W-PHP-501-LYN-1-1-mymeetic-aliyo.moussa/DossierCSS/style.css" rel="stylesheet" type="text/css">
+    <link href="../DossierCSS/style.css" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="#">
 </head>
 <body>
@@ -15,17 +15,17 @@
         <div id="trait"></div>
     </header>
 <div id="FormulaireConnexion">
-    <form action="">
+    <form action="" method="get">
         <h4>CONNEXION</h4>
         <hr>
             <label>Adresse Mail</label>
-            <input type="text">
+            <input type="email">
             <label>Mot de passe</label>
-            <input type="password">
-            <input type="submit" value="S'inscrire">
+            <input id="mdp" type="password">
+            <input type="submit" value="Se connecter">
             <p> Vous n'avez pas de compte ? <a href="inscription.html">S'inscrire</a></p>
     </form>
 </div>
+<script src="../DossierJS/connexion.js"></script>
 </body>
-<script src="/home/epitech-msc-20/Projet/W-PHP-501-LYN-1-1-mymeetic-aliyo.moussa/DossierJS/script.js"></script>
 </html>
