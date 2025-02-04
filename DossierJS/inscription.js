@@ -12,3 +12,4 @@ fetch("../index.php", { method: "get",})
         // inputMDP.addEventListener()
     })
     .catch((error) => console.error("Erreur :", error));
+    

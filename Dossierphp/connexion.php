@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class Connected {
 
@@ -8,8 +8,7 @@ class Connected {
     private $db='My_meetic';
     private $bdd;
 
-    public function __construct() {
-        
+    public function __construct() {        
         try {
             $this->bdd = new PDO("mysql:host=$this->serveur;dbname=$this->db", $this->username,$this->password);
             $this->bdd->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
@@ -17,11 +16,9 @@ class Connected {
         } catch(PDOException $e) {
             echo "erreur" . $e->getMessage();
         }
-
     }
-    
-    public function RequeteSQL($sql) {
 
+    public function RequeteSQL($sql) {
         try{
             $stmt = $this->bdd->query($sql);
             $resultat = $stmt->fetchall();
@@ -36,7 +33,7 @@ class Connected {
     }
 }
 
-$connect = new Connected ();
-$sql = "SELECT * FROM User_meetic;";
-$connect->RequeteSQL($sql);
 
+$connect = new Connected ();
+$sql = "SELECT email, passeword FROM User_meetic;";
+$connect->RequeteSQL($sql);

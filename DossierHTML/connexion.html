@@ -15,14 +15,14 @@
         <div id="trait"></div>
     </header>
 <div id="FormulaireConnexion">
-    <form action="" method="get">
+    <form action="" method="get" onsubmit="return false">
         <h4>CONNEXION</h4>
         <hr>
             <label>Adresse Mail</label>
-            <input type="email">
+            <input id="inputEmail" type="email">
             <label>Mot de passe</label>
             <input id="mdp" type="password">
-            <input type="submit" value="Se connecter">
+            <button id = "buttonConnect"><a id="addLien">Se connecter</a></button>
             <p> Vous n'avez pas de compte ? <a href="inscription.html">S'inscrire</a></p>
     </form>
 </div>

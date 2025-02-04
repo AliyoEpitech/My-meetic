@@ -1,4 +1,5 @@
-fetch("../index.php", { method: "get",})
+
+fetch("../Dossierphp/connexion.php", { method: "get",})
     .then((reponse) => {
         return reponse.json();
     })
@@ -6,18 +7,34 @@ fetch("../index.php", { method: "get",})
         console.log(json);
         var inputMDP = document.getElementById("mdp");
         console.log(inputMDP);
-        document.addEventListener("click", (e) => {
+        var buttonConnect = document.getElementById("buttonConnect");
+        console.log(buttonConnect);
+    
+        buttonConnect.addEventListener("click", (e) => {
+            buttonConnect["fromAction"] = "/DossierHTML/pageConnexion";
+        });
+    
+        document.addEventListener('click', (e) => {
             console.log(e.target);
-        })
+        });
+    
+        var inputEmail = document.getElementById('inputEmail');
+        let tableauUser = [];
 
-            json.forEach(element => {
-                if(element["passeword"] == inputMDP) {
-                    inputMDP.value.addEventListener("keypress", (e) => {
-                        console.log("tu a taper un mdp qui est bon");
-                    })
-                var passeword =  element["passeword"];
-                console.log(passeword);
-                }
-             });
+        // json.map((user) => {
+        //     console.log(user);    
+        //     buttonConnect.addEventListener('click', () => {
+        //         console.log(inputEmail['value']);
+        //         if(user['email'] == inputEmail['value'] || user['password'] == inputMDP['value']) {
+        //             var addLien = document.getElementById('addLien');
+        //             window.location = './pageConnexion.html';
+        //             console.log('ok');
+        //             return;
+        //         } else {
+        //             var addLien = document.getElementById('addLien');
+        //             addLien.href = ''; 
+        //         }
+        //     });
+        // });
     })
-    .catch((error) => console.error("Erreur :", error));
+    .catch((error) => console.error("Erreur:", error));
