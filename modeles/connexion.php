@@ -1,5 +1,7 @@
 <?php
 
+// header('Content-type: application/json');
+
 class Connected {
 
     private $serveur = 'localhost';
@@ -23,18 +25,18 @@ class Connected {
             $email = $_POST['email'];
             $password = $_POST['password'];
             if($email != "" && $password != "") {
-                $req = $this->bdd->query("SELECT * FROM User_meetic WHERE email = '$email' AND passeword = '$password'");
-                $rep = $req->fetch();
-                if($rep['id'] == true) {
-                    header('Location: /views/HTML/pageConnexion.html');
+                $requete = $this->bdd->query("SELECT * FROM User_meetic WHERE email = '$email' AND passeword = '$password'");
+                $reponse = $requete->fetch();
+                if($reponse['id'] != false) {
+                    header('Location:/views/HTML/pageConnexion.html');
+                    exit();
                 } else {
-                    return null;
+                    echo 'Email ou mot de passe incorrect !';
                 }
-            } else {
-                return null;
             }
     }
 }
+
 
 $connect = new Connected ();
 $connect->connexion();

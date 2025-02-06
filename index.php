@@ -20,23 +20,23 @@ class Connected {
 
     }
     
-    public function RequeteSQL($sql) {
+    // public function RequeteSQL($sql) {
 
-        try{
-            $stmt = $this->bdd->query($sql);
-            $resultat = $stmt->fetchall();
-            $tbl = [];
-            foreach($resultat as $value) {
-                array_push($tbl, $value);
-            }
-            echo json_encode($tbl);
-        } catch(PDOException $e) {
-            echo "erreur lors de l'execution de la requete" . $e->getMessage();
-        }
-    }
+    //     try{
+    //         $stmt = $this->bdd->query($sql);
+    //         $resultat = $stmt->fetchall();
+    //         $tbl = [];
+    //         foreach($resultat as $value) {
+    //             array_push($tbl, $value);
+    //         }
+    //         echo json_encode($tbl);
+    //     } catch(PDOException $e) {
+    //         echo "erreur lors de l'execution de la requete" . $e->getMessage();
+    //     }
+    // }
 }
 
 $connect = new Connected ();
-$sql = "SELECT * FROM User_meetic;";
-$connect->RequeteSQL($sql);
+// $sql = "SELECT * FROM User_meetic;";
+// $connect->RequeteSQL($sql);
 
