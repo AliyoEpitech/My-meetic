@@ -1,4 +1,4 @@
-fetch("../index.php", { method: "post",})
+fetch("/modeles/inscription.php", { method: "post",})
     .then((reponse) => {
         return reponse.json();
     })

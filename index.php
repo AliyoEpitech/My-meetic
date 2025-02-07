@@ -36,7 +36,7 @@ class Connected {
     // }
 }
 
-$connect = new Connected ();
+// $connect = new Connected ();
 // $sql = "SELECT * FROM User_meetic;";
 // $connect->RequeteSQL($sql);
 
