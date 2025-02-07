@@ -19,12 +19,18 @@ public function __construct() {
 }
 
 public function inscription() {
+
     if(isset($_POST['Send'])) {
-        var_dump($_POST);
+        $nom = $_POST['nom'];
+        $prenom = $_POST['prenom'];
+        $ville = $_POST['ville'];
+        $mail = $_POST['email'];
+        $pass = $_POST['password'];
+
+        $req = $this->bdd->query("INSERT INTO User_meetic (lastname, firstname, city, email, passeword) VALUES ('$nom', '$prenom','$ville', '$mail,'$pass')");
     }
+
 }
-
-
     
 }
 

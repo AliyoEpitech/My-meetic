@@ -14,20 +14,19 @@
         <h1>My_meetic</h1>
     </header>
 <div id="FormulaireConnexion">
-    <form action="">
+    <form method="post" action="/modeles/inscription.php">
         <h4>INSCRIPTION</h4>
         <hr>
         <div class="name-field">
             <div>
                 <label>Nom</label>
-                <input type="text">
+                <input id="nom" name="nom" type="text" required>
             </div>
             <div>
                 <label>Prénom</label>
-                <input type="text">
+                <input id="Prénom" name="prenom" type="text" required>
             </div>
         </div>
-
         <label>Genre</label>
         <select id="genre" name="genre">
             <option value="Homme">Homme</option>
@@ -39,9 +38,9 @@
         <input type="text" id="ville" name="ville" required>
         <br>
             <label>Adresse Mail</label>
-            <input type="email">
+            <input id="email" name="email" type="email" required>
             <label>Mot de passe</label>
-            <input id="mdp" type="password">
+            <input id="mdp" name="password" type="password" required>
             <input type="submit" name="Send" id="buttonConnect" value="M'inscrire">
             <p> Vous avez déjà un compte ? <a href="connexion.html">Se connecter</a></p>
     </form>
