@@ -27,9 +27,9 @@ public function inscription() {
         $mail = $_POST['email'];
         $pass = $_POST['password'];
 
-        $req = $this->bdd->query("INSERT INTO User_meetic (lastname, firstname, city, email, passeword) VALUES ('$nom', '$prenom','$ville', '$mail,'$pass')");
+        $req = $this->bdd->prepare("INSERT INTO User_meetic (lastname, firstname, city, email, passeword) VALUES ('$nom', '$prenom','$ville', '$mail,'$pass')");
+        $req->execute();
     }
-
 }
     
 }
