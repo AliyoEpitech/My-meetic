@@ -1,7 +1,5 @@
 <?php
 
-// header('Content-type: application/json');
-
 class Connected {
 
     private $serveur = 'localhost';
@@ -37,6 +35,6 @@ class Connected {
     }
 }
 
-
 $connect = new Connected ();
 $connect->connexion();
+
